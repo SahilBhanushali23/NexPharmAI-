@@ -1,0 +1,96 @@
+{
+  "model_name": "LightGBM",
+  "model_type": "Binary Machine Failure Classifier",
+  "version": "1.0.0",
+  "dataset": "AI4I 2020 Predictive Maintenance Dataset (UCI)",
+  "features": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "numerical_features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "categorical_features": [
+    "Type"
+  ],
+  "benchmark_comparison": {
+    "XGBoost": {
+      "accuracy": 0.9645,
+      "precision": 0.4872,
+      "failure_recall": 0.8382,
+      "failure_f1": 0.6162,
+      "roc_auc": 0.9745,
+      "confusion_matrix": [
+        [
+          1872,
+          60
+        ],
+        [
+          11,
+          57
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.942,
+      "precision": 0.3462,
+      "failure_recall": 0.7941,
+      "failure_f1": 0.4821,
+      "roc_auc": 0.9647,
+      "confusion_matrix": [
+        [
+          1830,
+          102
+        ],
+        [
+          14,
+          54
+        ]
+      ]
+    },
+    "LightGBM": {
+      "accuracy": 0.9665,
+      "precision": 0.5044,
+      "failure_recall": 0.8382,
+      "failure_f1": 0.6298,
+      "roc_auc": 0.9768,
+      "confusion_matrix": [
+        [
+          1876,
+          56
+        ],
+        [
+          11,
+          57
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "accuracy": 0.829,
+      "precision": 0.1451,
+      "failure_recall": 0.8235,
+      "failure_f1": 0.2467,
+      "roc_auc": 0.9077,
+      "confusion_matrix": [
+        [
+          1602,
+          330
+        ],
+        [
+          12,
+          56
+        ]
+      ]
+    }
+  },
+  "selection_rationale": "LightGBM achieved the optimal balance of Failure Recall (0.8382) and Failure F1 (0.6298) under SMOTE oversampling, maximizing undetected breakdown prevention.",
+  "trained_date": "2026-09-06T18:46:49.669730"
+}

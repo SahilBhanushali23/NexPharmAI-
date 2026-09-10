@@ -1,0 +1,1 @@
+"""NexPharmAI Backend Application Package"""

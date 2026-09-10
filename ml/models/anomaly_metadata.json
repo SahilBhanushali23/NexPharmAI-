@@ -1,0 +1,27 @@
+{
+  "model_name": "Isolation Forest",
+  "model_type": "Unsupervised Anomaly Detection",
+  "version": "1.0.0",
+  "features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "n_estimators": 150,
+  "contamination": 0.04,
+  "thresholds": {
+    "NORMAL_MAX": 0.45721087466279653,
+    "LOW_MAX": 0.5078174128012263,
+    "MEDIUM_MAX": 0.5745535991009477,
+    "HIGH_MAX": 0.6210927195525109
+  },
+  "score_percentiles": {
+    "p50": 0.4572,
+    "p80": 0.5078,
+    "p95": 0.5746,
+    "p99": 0.6211
+  },
+  "trained_date": "2026-09-06T18:47:43.550549"
+}
